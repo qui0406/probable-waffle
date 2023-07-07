@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            background-image: url(https://antimatter.vn/wp-content/uploads/2022/10/hinh-nen-cute-338x600.jpg);
+            background-size: contain cover;
+        }
+
+        body h1{
+            text-align: center;
+            width: 100vw;     
+            color: blue;
+        }
+
+        body > div{            
+            border: 2px solid #000;
+            width: 100px;
+            padding: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+            background-color: pink;
+            color: red;
+            font-weight: 800;
+        }
+        body > div:nth-child(1) {
+            position: absolute;
+            top: 500px;
+            left: 30%;
+        }
+        body > div:nth-child(2) {
+            position: absolute;
+            top: 500px;
+            right: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Em có yêu anh hôngggg?</h1>
+    <div id="ok">
+        Dạ có
+    </div>
+    <div id="ko">Không
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+         $("#ok").click(()=>{
+            alert("Anh cũng yêu bé nhiều nhắmmmm");
+        })
+        $("#ko").mousedown(() => { 
+            $("#ko").css({
+                position: "absolute",
+                left: `${($(window).width()-250)*Math.random()}px`,
+                top: `${($(window).height()-100)*Math.random()}px`
+            })
+        });
+    </script>
+</body>
+</html>
